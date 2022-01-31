@@ -1,0 +1,43 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
+
+local window = library:Window("Tsunami Game | By heber")
+
+window:Label("Misc", Color3.fromRGB(127, 143, 166))
+
+window:Button("AutoWin", function()
+      _G.win = true
+        while _G.win == true do
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-89, 119.01619, 940.5, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            wait(30)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.0314941, 120.570435, 741.066406, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
+wait(1)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-26.4499054, 124.24585, 559.576355, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+wait(1)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56.9999084, 127, 237.499969, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+wait(1)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-47.4496498, 124.245819, -276.423004, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
+wait(1)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13.9828959, 132.362671, -689.549927, -1.1920929e-07, -0, -1.00000012, 0, 1, -0, 1.00000012, 0, -1.1920929e-07)
+wait(1)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9, 50.5, -1053, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+wait(3)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-89, 119.01619, 940.5, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end
+end)
+
+window:Toggle("Bring coins", false, function(t)
+if t then
+      _G.coin = true
+        while _G.coin == true do
+            wait(0.1) do
+    for i, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v.Name == "CoinCollision" then
+            v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        end
+end
+end
+end
+    else
+        _G.coin = false
+    end
+end)
